@@ -59,7 +59,7 @@ function identify(data, options, cb) {
   }, cb);
 }
 
-var bitmap = fs.readFileSync('./sample.wav');
+var bitmap = fs.readFileSync(getAudio);
 
 identify(new Buffer(bitmap), defaultOptions, function (err, httpResponse, body) {
   if (err) console.log(err);
