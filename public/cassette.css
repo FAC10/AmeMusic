@@ -1,520 +1,599 @@
+body {
+  /*background: linear-gradient(to right, #FF301A , #F40066);*/
+  background: pink;
+}
+.container {
+  text-align: center;
+}
+h1 {
+  font-family: 'Anton';
+  font-size: 10em;
+  text-align: center;
+  color: white;
+}
+.mainButton,
+.confirmUploadButton,
+input {
+  background-color: Transparent;
+  border-radius: 10%;
+  border: 5px solid white;
+  text-align: center;
+  color: white;
+  font-family: 'Anton';
+  font-size: 3em;
+  padding: 0.5em;
+  margin-left: auto;
+  right: 30%;
+  left: 30%;
+}
+
+input {
+  width: 60%;
+}
+
+.trackList {
+  border: 5px solid white;
+  margin: 10%;
+  border-radius: 10%;
+}
+
+.tracklistHeading {
+  font-family: 'Anton';
+  font-size: 3em;
+  text-align: center;
+  color: white;
+}
+
+.tracklistItem {
+  color: white;
+  font-size: 2em;
+  text-align: left;
+  list-style-type: none;
+}
+
+.closeButton {
+  border: none;
+  background-color: Transparent;
+  color: white;
+  font-family: 'Anton';
+  font-size: 2em;
+}
+
+.uploadButton {
+  padding: 1em;
+}
 
 #cassette {
   display: block;
 }
-.intro{
-  width:100%;
-  height:30px;
+.intro {
+  width: 100%;
+  height: 30px;
 }
-.intro h1{
-  font-family:'Oswald', sans-serif;
-  letter-spacing:2px;
-  font-weight:normal;
-  font-size:14px;
-  color:#fff;
-  text-align:center;
-  margin-top:10px;
+.intro h1 {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+  font-weight: normal;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
 }
-.intro a{
-  color:#e74c3c;
-  font-weight:bold;
-  letter-spacing:0;
+.intro a {
+  color: #e74c3c;
+  font-weight: bold;
+  letter-spacing: 0;
 }
-.intro img{
-  width:20px;
-  heght:20px;
-  margin-left:5px;
-  margin-right:5px;
-  position:relative;
-  top:5px;
+.intro img {
+  width: 20px;
+  heght: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  position: relative;
+  top: 5px;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 /*body{
   background:pink;
 }*/
 
-.mixtape{
-  width:350px;
-  height:210px;
-  margin:50px auto;
-  background:#958366;
-  border-radius:10px;
-  position:relative;
+.mixtape {
+  width: 350px;
+  height: 210px;
+  margin: 50px auto;
+  background: #958366;
+  border-radius: 10px;
+  position: relative;
+}
+.mixtape:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  top: 0;
+  background: #746757;
+}
+.mixtape:after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 25px;
+  top: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+  background: #5d513c;
+}
 
+.tag {
+  width: 300px;
+  height: 140px;
+  background: #fff;
+  margin: auto;
+  position: relative;
+  z-index: 90;
+  top: 20px;
+  border-radius: 10px;
 }
-.mixtape:before{
-  content:"";
-  position:absolute;
-  width:100%;
-  height:25px;
-  top:0;
-  background:#746757;
+.tag:before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 8px;
+  background: #836d51;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: -8px;
 }
-.mixtape:after{
-  content:"";
-  position:absolute;
-  width:80%;
-  height:25px;
-  top:0;
-  margin:auto;left:0;right:0;
-  background:#5D513C;
+.tag:after {
+  content: "INDEX";
+  position: absolute;
+  font-family: arial;
+  font-weight: normal;
+  font-size: 10px;
+  top: 20px;
+  left: 20px;
 }
-
-.tag{
-  width:300px;
-  height:140px;
-  background:#fff;
-  margin:auto;
-  position:relative;
-  z-index:90;
-  top:20px;
-  border-radius:10px;
+.title {
+  width: 280px;
+  height: 35px;
+  border: 2px solid #222;
+  margin: auto;
+  position: relative;
+  top: 10px;
 }
-.tag:before{
-  content:"";
-  position:absolute;
-  width:90%;
-  height:8px;
-  background:#836D51;
-  margin:auto;
-  left:0;right:0;
-  bottom:-8px;
+.title:before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 2px;
+  background: #222;
+  right: 5px;
+  top: 8px;
 }
-.tag:after{
-  content:"INDEX";
-  position:absolute;
-  font-family:arial;
-  font-weight:normal;
-  font-size:10px;
-  top:20px;
-  left:20px;
+.title:after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 2px;
+  background: #222;
+  right: 5px;
+  top: 18px;
 }
-.title{
-  width:280px;
-  height:35px;
-  border:2px solid #222;
-  margin:auto;
-  position:relative;
-  top:10px;
+.player {
+  width: 90%;
+  height: 12px;
+  background: #78fe01;
+  margin: auto;
+  position: relative;
+  top: 40px;
 }
-.title:before{
-  content:"";
-  position:absolute;
-  width:200px;
-  height:2px;
-  background:#222;
-  right:5px;
-  top:8px;
+.player:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 12px;
+  background: #fb0202;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: -12px;
 }
-.title:after{
-  content:"";
-  position:absolute;
-  width:200px;
-  height:2px;
-  background:#222;
-  right:5px;
-  top:18px;
+.player:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 12px;
+  background: #02dbfa;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 12px;
 }
-.player{
-  width:90%;
-  height:12px;
-  background:#78FE01;
-  margin:auto;
-  position:relative;
-  top:40px;
+.play {
+  width: 190px;
+  height: 55px;
+  border-radius: 5px;
+  background: #222;
+  margin: auto;
+  position: relative;
+  z-index: 91;
+  top: -22px;
 }
-.player:before{
-  content:"";
-  position:absolute;
-  width:100%;
-  height:12px;
-  background:#FB0202;
-  margin:auto;left:0;right:0;
-  top:-12px;
+.play:before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 35px;
+  background: #444;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
-.player:after{
-  content:"";
-  position:absolute;
-  width:100%;
-  height:12px;
-  background:#02DBFA;
-  margin:auto;left:0;right:0;
-  top:12px;
+.roll-1 {
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  border-radius: 50%;
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: 3px solid #fff;
+  box-shadow: inset 2px 0 2px rgba(0, 0, 0, .3);
+  position: relative;
+  overflow: hidden;
+  -webkit-animation: roll 2s infinite linear;
+  -moz-animation: roll 2s infinite linear;
+  animation: roll 2s infinite linear;
 }
-.play{
-  width:190px;
-  height:55px;
-  border-radius:5px;
-  background:#222;
-  margin:auto;
-  position:relative;
-  z-index:91;
-  top:-22px;
+.roll-1:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 3px;
+  left: -5px;
+  top: 10px;
 }
-.play:before{
-  content:"";
-  position:absolute;
-  width:80px;
-  height:35px;
-  background:#444;
-  margin:auto;top:0;bottom:0;right:0;left:0;
+.roll-1:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 3px;
+  right: -5px;
+  top: 10px;
 }
-.roll-1{
-  width:35px;
-  height:35px;
-  background:transparent;
-  border-radius:50%;
-  float:left;
-  margin-top:10px;
-  margin-left:10px;
-  border:3px solid #fff;
-  box-shadow:inset 2px 0 2px rgba(0, 0, 0, .3);
-  position:relative;
-  overflow:hidden;
-  -webkit-animation:roll 2s infinite linear;
-  -moz-animation:roll 2s infinite linear;
-  animation:roll 2s infinite linear;
+.teeth {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 3px;
+  right: 10px;
+  top: -5px;
 }
-.roll-1:before{
-  content:"";
-  position:absolute;
-  width:10px;
-  height:10px;
-  background:#fff;
-  border-radius:3px;
-  left:-5px;
-  top:10px;
+.teeth:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 3px;
+  top: 30px;
 }
-.roll-1:after{
-  content:"";
-  position:absolute;
-  width:10px;
-  height:10px;
-  background:#fff;
-  border-radius:3px;
-  right:-5px;
-  top:10px;
+.roll-2 {
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  border-radius: 50%;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+  border: 3px solid #fff;
+  box-shadow: inset 2px 0 2px rgba(0, 0, 0, .3);
+  transform: rotate(45deg);
+  position: relative;
+  overflow: hidden;
+  -webkit-animation: roll 2s infinite linear;
+  -moz-animation: roll 2s infinite linear;
+  animation: roll 2s infinite linear;
 }
-.teeth{
-  position:absolute;
-  width:10px;
-  height:10px;
-  background:#fff;
-  border-radius:3px;
-  right:10px;
-  top:-5px;
+.roll-2:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 3px;
+  left: -5px;
+  top: 10px;
 }
-.teeth:after{
-  content:"";
-  position:absolute;
-  width:10px;
-  height:10px;
-  background:#fff;
-  border-radius:3px;
-  top:30px;
+.roll-2:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 3px;
+  right: -5px;
+  top: 10px;
 }
-.roll-2{
-  width:35px;
-  height:35px;
-  background:transparent;
-  border-radius:50%;
-  float:right;
-  margin-top:10px;
-  margin-right:10px;
-  border:3px solid #fff;
-  box-shadow:inset 2px 0 2px rgba(0, 0, 0, .3);
-  transform:rotate(45deg);
-  position:relative;
-  overflow:hidden;
-  -webkit-animation:roll 2s infinite linear;
-  -moz-animation:roll 2s infinite linear;
-  animation:roll 2s infinite linear;
+.b-txt {
+  width: 250px;
+  height: 20px;
+  margin: -15px auto;
+  position: relative;
 }
-.roll-2:before{
-  content:"";
-  position:absolute;
-  width:10px;
-  height:10px;
-  background:#fff;
-  border-radius:3px;
-  left:-5px;
-  top:10px;
+.slog-txt {
+  width: 60px;
+  height: 20px;
+  position: absolute;
+  left: 0;
 }
-.roll-2:after{
-  content:"";
-  position:absolute;
-  width:10px;
-  height:10px;
-  background:#fff;
-  border-radius:3px;
-  right:-5px;
-  top:10px;
+.slog-txt h1 {
+  font-family: arial;
+  font-weight: bold;
+  font-size: 18px;
+  color: #b09f5a;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+  line-height: 20px;
 }
-.b-txt{
-  width:250px;
-  height:20px;
-  margin:-15px auto;
-  position:relative;
+.right-txt {
+  position: absolute;
+  right: -10px;
+  width: 60px;
+  height: 20px;
 }
-.slog-txt{
-  width:60px;
-  height:20px;
-  position:absolute;
-  left:0;
-}
-.slog-txt h1{
-  font-family:arial;
-  font-weight:bold;
-  font-size:18px;
-  color: #B09F5A;
-  text-shadow:0 1px 2px rgba(0, 0, 0, 1);
-  line-height:20px;
-}
-.right-txt{
-  position:absolute;
-  right:-10px;
-  width:60px;
-  height:20px;
-}
-.right-txt h1{
-  font-family:arial;
-  font-weight:normal;
-  font-size:24px;
+.right-txt h1 {
+  font-family: arial;
+  font-weight: normal;
+  font-size: 24px;
   color: #000;
-  line-height:20px;
-  text-align:right;
+  line-height: 20px;
+  text-align: right;
 }
-.right-txt h2{
-  font-family:arial;
-  font-weight:normal;
-  font-size:10px;
+.right-txt h2 {
+  font-family: arial;
+  font-weight: normal;
+  font-size: 10px;
   color: #000;
-  line-height:20px;
-  text-align:right;
-  position:relative;
-  top:-37px;
+  line-height: 20px;
+  text-align: right;
+  position: relative;
+  top: -37px;
 }
-.bot-det{
-  width:100%;
-  height:40px;
-  margin-top:30px;
-  position:relative;
+.bot-det {
+  width: 100%;
+  height: 40px;
+  margin-top: 30px;
+  position: relative;
 }
-.bot-det:before{
-  content:"";
-  position:absolute;
-  width:100%;
-  height:20px;
-  background:#746757;
-  bottom:0;
+.bot-det:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  background: #746757;
+  bottom: 0;
 }
-.bot-det:after{
-  content:"";
-  position:absolute;
-  top:15px;
-  width:220px;
-  height:20px;
-  border-radius:10px;
-  background:#746757;
-  margin:auto;
-  left:0;right:0;
+.bot-det:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  width: 220px;
+  height: 20px;
+  border-radius: 10px;
+  background: #746757;
+  margin: auto;
+  left: 0;
+  right: 0;
 }
-.screws{
-  width:100%;
-  height:100%;
-  top:0;
-  position:absolute;
-  z-index:99;
+.screws {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  z-index: 99;
 }
-.scr-1{
-  width:12px;
-  height:12px;
-  background:#D7C796;
-  border-radius:50%;
-  top:5px;
-  left:5px;
-  position:absolute;
+.scr-1 {
+  width: 12px;
+  height: 12px;
+  background: #d7c796;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+  position: absolute;
 }
-.scr-1:before{
-  content:"";
-  position:absolute;
-  width:8px;
-  height:2px;
-  background:#97908E;
-  left:2px;
-  top:5px;
-  transform:rotate(45deg);
-  -moz-transform:rotate(45deg);
-  -webkit-transform:rotate(45deg);
+.scr-1:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  background: #97908e;
+  left: 2px;
+  top: 5px;
+  transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
-.scr-1:after{
-  content:"";
-  position:absolute;
-  width:2px;
-  height:8px;
-  background:#97908E;
-  left:5px;
-  top:2px;
-  transform:rotate(45deg);
-  -moz-transform:rotate(45deg);
-  -webkit-transform:rotate(45deg);
+.scr-1:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 8px;
+  background: #97908e;
+  left: 5px;
+  top: 2px;
+  transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
-.scr-2{
-  width:12px;
-  height:12px;
-  background:#D7C796;
-  border-radius:50%;
-  top:5px;
-  right:5px;
-  position:absolute;
+.scr-2 {
+  width: 12px;
+  height: 12px;
+  background: #d7c796;
+  border-radius: 50%;
+  top: 5px;
+  right: 5px;
+  position: absolute;
 }
-.scr-2:before{
-  content:"";
-  position:absolute;
-  width:8px;
-  height:2px;
-  background:#97908E;
-  left:2px;
-  top:5px;
-  transform:rotate(15deg);
-  -moz-transform:rotate(15deg);
-  -webkit-transform:rotate(15deg);
+.scr-2:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  background: #97908e;
+  left: 2px;
+  top: 5px;
+  transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
 }
-.scr-2:after{
-  content:"";
-  position:absolute;
-  width:2px;
-  height:8px;
-  background:#97908E;
-  left:5px;
-  top:2px;
-  transform:rotate(15deg);
-  -moz-transform:rotate(15deg);
-  -webkit-transform:rotate(15deg);
+.scr-2:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 8px;
+  background: #97908e;
+  left: 5px;
+  top: 2px;
+  transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
 }
-.scr-3{
-  width:12px;
-  height:12px;
-  background:#D7C796;
-  border-radius:50%;
-  bottom:5px;
-  left:5px;
-  position:absolute;
+.scr-3 {
+  width: 12px;
+  height: 12px;
+  background: #d7c796;
+  border-radius: 50%;
+  bottom: 5px;
+  left: 5px;
+  position: absolute;
 }
-.scr-3:before{
-  content:"";
-  position:absolute;
-  width:8px;
-  height:2px;
-  background:#97908E;
-  left:2px;
-  top:5px;
-  transform:rotate(70deg);
-  -moz-transform:rotate(70deg);
-  -webkit-transform:rotate(70deg);
+.scr-3:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  background: #97908e;
+  left: 2px;
+  top: 5px;
+  transform: rotate(70deg);
+  -moz-transform: rotate(70deg);
+  -webkit-transform: rotate(70deg);
 }
-.scr-3:after{
-  content:"";
-  position:absolute;
-  width:2px;
-  height:8px;
-  background:#97908E;
-  left:5px;
-  top:2px;
-  transform:rotate(70deg);
-  -moz-transform:rotate(70deg);
-  -webkit-transform:rotate(70deg);
+.scr-3:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 8px;
+  background: #97908e;
+  left: 5px;
+  top: 2px;
+  transform: rotate(70deg);
+  -moz-transform: rotate(70deg);
+  -webkit-transform: rotate(70deg);
 }
-.scr-4{
-  width:12px;
-  height:12px;
-  background:#D7C796;
-  border-radius:50%;
-  bottom:5px;
-  right:5px;
-  position:absolute;
+.scr-4 {
+  width: 12px;
+  height: 12px;
+  background: #d7c796;
+  border-radius: 50%;
+  bottom: 5px;
+  right: 5px;
+  position: absolute;
 }
-.scr-4:before{
-  content:"";
-  position:absolute;
-  width:8px;
-  height:2px;
-  background:#97908E;
-  left:2px;
-  top:5px;
-  transform:rotate(90deg);
-  -moz-transform:rotate(90deg);
-  -webkit-transform:rotate(90deg);
+.scr-4:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  background: #97908e;
+  left: 2px;
+  top: 5px;
+  transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
 }
-.scr-4:after{
-  content:"";
-  position:absolute;
-  width:2px;
-  height:8px;
-  background:#97908E;
-  left:5px;
-  top:2px;
-  transform:rotate(90deg);
-  -moz-transform:rotate(90deg);
-  -webkit-transform:rotate(90deg);
+.scr-4:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 8px;
+  background: #97908e;
+  left: 5px;
+  top: 2px;
+  transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
 }
-.scr-5{
-  width:12px;
-  height:12px;
-  background:#D7C796;
-  border-radius:50%;
-  bottom:16px;
-  right:169px;
-  position:absolute;
+.scr-5 {
+  width: 12px;
+  height: 12px;
+  background: #d7c796;
+  border-radius: 50%;
+  bottom: 16px;
+  right: 169px;
+  position: absolute;
 }
-.scr-5:before{
-  content:"";
-  position:absolute;
-  width:8px;
-  height:2px;
-  background:#97908E;
-  left:2px;
-  top:5px;
-  transform:rotate(45deg);
-  -moz-transform:rotate(45deg);
-  -webkit-transform:rotate(45deg);
+.scr-5:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  background: #97908e;
+  left: 2px;
+  top: 5px;
+  transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
-.scr-5:after{
-  content:"";
-  position:absolute;
-  width:2px;
-  height:8px;
-  background:#97908E;
-  left:5px;
-  top:2px;
-  transform:rotate(45deg);
-  -moz-transform:rotate(45deg);
-  -webkit-transform:rotate(45deg);
+.scr-5:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 8px;
+  background: #97908e;
+  left: 5px;
+  top: 2px;
+  transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 
-@-webkit-keyframes roll{
-  from{
-    transform:rotate(0deg);
+@-webkit-keyframes roll {
+  from {
+    transform: rotate(0deg);
   }
-  to{
-    transform:rotate(360deg);
-  }
-}
-@-moz-keyframes roll{
-  from{
-    transform:rotate(0deg);
-  }
-  to{
-    transform:rotate(360deg);
+  to {
+    transform: rotate(360deg);
   }
 }
-@keyframes roll{
-  from{
-    transform:rotate(0deg);
+@-moz-keyframes roll {
+  from {
+    transform: rotate(0deg);
   }
-  to{
-    transform:rotate(360deg);
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes roll {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

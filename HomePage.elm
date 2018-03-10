@@ -1,17 +1,39 @@
-module BeginningElm exposing (..)
+module ElmMusicRecognitionModule exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 
 
-model =
-    { showRecords = False
-    , showArchive = False
-    , hideArchive = True
-    , showTrackList = False
-    , hideTrackList = True
+main =
+    program
+        { init = init
+        , update = update
+        , subscriptions = \_ -> Sub.none
+        , view = view
+        }
+
+
+
+-- MODEL
+
+
+type alias Model =
+    { showRecords : Bool
+    , showArchive : Bool
+    , hideArchive : Bool
+    , showTrackList : Bool
+    , hideTrackList : Bool
     }
+
+
+init : ( Model, Cmd Msg )
+init =
+    ( Model False False True False True, Cmd.none )
+
+
+
+-- UPDATE
 
 
 type Msg
@@ -22,32 +44,38 @@ type Msg
     | HideTrackList
 
 
-update msg model_ =
+update : Msg -> Model -> ( Model, Cmd Msg )
+update msg model =
     case msg of
         ShowRecords ->
-            { model_ | showRecords = True }
+            ( { model | showRecords = True }, Cmd.none )
 
         ShowArchive ->
-            { model_ | showArchive = True }
+            ( { model | showArchive = True }, Cmd.none )
 
         HideArchive ->
-            { model_ | showArchive = False }
+            ( { model | showArchive = False }, Cmd.none )
 
         ShowTrackList ->
-            { model_ | showTrackList = True }
+            ( { model | showTrackList = True }, Cmd.none )
 
         HideTrackList ->
-            { model_ | showTrackList = False }
+            ( { model | showTrackList = False }, Cmd.none )
 
 
-view model_ =
+
+-- VIEW
+
+
+view : Model -> Html Msg
+view model =
     div [ class "container" ]
         [ h1 [] [ text "Ame Music" ]
         , button [ onClick ShowRecords, class "mainButton" ]
             [ text "Upload File" ]
         , button [ onClick ShowArchive, class "mainButton" ]
             [ text "Show Recent Tracks" ]
-        , if model_.showRecords then
+        , if model.showRecords then
             div []
                 [ h1 [] []
                 , input [ type_ "file", placeholder "Upload your file", class "uploadButton" ] []
@@ -55,7 +83,7 @@ view model_ =
                 ]
           else
             text ""
-        , if model_.showArchive then
+        , if model.showArchive then
             div [ class "trackList" ]
                 [ h2 [ class "tracklistHeading" ] [ text "Recent Tracks" ]
                 , ul [ class "tracklistList" ]
@@ -68,11 +96,11 @@ view model_ =
                 ]
           else
             text ""
-        , if model_.hideArchive then
+        , if model.hideArchive then
             text ""
           else
             text "something went wrong"
-        , if model_.showTrackList then
+        , if model.showTrackList then
             div [ class "trackList" ]
                 [ h2 [ class "tracklistHeading" ] [ text "Tracklist" ]
                 , ul [ class "tracklistList" ]
@@ -85,16 +113,40 @@ view model_ =
                 ]
           else
             text ""
-        , if model_.hideTrackList then
+        , if model.hideTrackList then
             text ""
           else
             text "something went wrong"
+
+        , div [ id "cassette", class "mixtape" ]
+            [ div [ class "tag" ]
+                  [ div [ class "title" ] []
+                  , div [ class "player" ]
+                        [ div [ class "play" ]
+                              [ div [ class "roll-1" ]
+                                    [ div [ class "teeth" ] []
+                                    ]
+                              , div [ class "roll-2" ]
+                                    [ div [ class "teeth" ] []
+                                    ]
+                              ]
+                              , div [ class "b-txt" ]
+                                    [ div [ class "slog-text" ]
+                                          [ h1 [] [ text "Eliteware" ]
+                                          ]
+                                    , div [ class "text-right" ]
+                                          [ h1 [] [ text "F190" ]
+                                          , h2 [] [ text "F190" ]
+                                          ]
+                                    ]
+                        ]
+                ]
+                , div [ class "bot-det" ] []
+                , div [ class "screws" ]
+                      [ div [ class "scr-1" ] []
+                      , div [ class "scr-2" ] []
+                      , div [ class "scr-3" ] []
+                      , div [ class "scr-4" ] []
+                      ]
+          ]
         ]
-
-
-main =
-    beginnerProgram
-        { model = model
-        , update = update
-        , view = view
-        }
