@@ -3,6 +3,40 @@ module ElmMusicRecognitionModule exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
+import Http
+import Json.Decode exposing (int, string, list, decodeString, Decoder)
+import Task exposing (Task, andThen)
+
+data : String
+data =
+    """
+    [
+      {
+      "track id_number": 2,
+      "Artist": "Anthony Naples",
+      "Title": "Refugio"
+      }
+    ]
+  """
+
+type alias TrackID =
+  { artist : String
+  , title : String
+}
+
+trackIDDecoder : Decoder TrackID
+trackIDDecoder =
+  decode
+    TrackID
+    |> required "Artist" string
+    |> required "Title" string
+
+main : Html msg
+main =
+  let
+    source =
+      decodeString (list trackIDDecoder) data
+
 
 
 main =
